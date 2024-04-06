@@ -14,7 +14,7 @@ import java.util.List;
 public class ConversionConfig {
 
     @Bean
-    public R2dbcCustomConversions r2dbcCustomConversions() {
+    public R2dbcCustomConversions r2dbcCustomConversionsForDateTime() {
         List<Converter<?, ?>> converters = new ArrayList<>();
         converters.add(new LocalDateToLocalDateTimeConverter());
         return R2dbcCustomConversions.of(MySqlDialect.INSTANCE, converters);

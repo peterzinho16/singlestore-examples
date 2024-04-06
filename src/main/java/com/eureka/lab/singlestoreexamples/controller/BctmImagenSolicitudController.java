@@ -53,6 +53,8 @@ public class BctmImagenSolicitudController {
         return repository.findById(id)
                 .map(existingBctmImagenSolicitud -> {
                     // copy properties from `bctmImagenSolicitud` to `existingBctmImagenSolicitud`
+                    existingBctmImagenSolicitud.setCoUsuActualiza(bctmImagenSolicitud.getCoUsuActualiza());
+                    existingBctmImagenSolicitud.setInEncriptado(bctmImagenSolicitud.getInEncriptado());
                     return existingBctmImagenSolicitud;
                 })
                 .flatMap(repository::save);

@@ -1,9 +1,9 @@
 
 logging:
   level:
-    io.r2dbc.postgresql.client: DEBUG # for database initialization
-    io.r2dbc.postgresql.QUERY: DEBUG # for queries
-    io.r2dbc.postgresql.PARAM: DEBUG # for parameters
+    io.asyncer.r2dbc.mysql.client: DEBUG # for database initialization
+    io.asyncer.r2dbc.mysql.QUERY: DEBUG # for queries
+    io.asyncer.r2dbc.mysql.PARAM: DEBUG # for parameters
     org:
       springframework:
         web:
